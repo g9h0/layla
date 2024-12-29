@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>G9h.io - A technology blog</title>
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="description" content="A blog about technology related topics">
+<meta name="keywords" content="blog, linux, computers, networking, programming">
+</head>
+<body>
+<div class="container">
+<header>
+<nav>
+<h1><a class="g9h" href="/"><span class="inline-terminal">g9h.io</span></a></h1>
+</nav>
+</header>
+<main>
+<h1>Hello World</h1>
+<p>I'm Gareth.  Welcome to my personal blog.</p>
+<ul class="index">
+{%- for post in posts %}
+<li>{{ post.date }} - <a href="{{ post.filename }}">{{ post.title }}</a></li>
+{%- endfor %}
+</ul>
+</main>
+</div>
+<script src="prism.js"></script>
+</body>
+</html>

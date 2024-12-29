@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --primary-color: #c8ff00;
+    --primary-font: "IBM Plex Mono", monospace;
+    --primary-font-size: 14px;
+    --link-color: #5bffa2
+}
+
+body {
+    background-image: url('assets/bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+html, body { margin: 5px; padding: 0px; color: #ffffff; font-size: var(--primary-font-size); font-family: var(--primary-font); }
+header { padding: 3px}
+main { margin: 0px; padding: 0px 2px; }
+p, h1, h2, .intro { margin: 0px; margin-bottom: 1.5em; }
+p { line-height: 1.6em }
+h1 { font-size: 1.4em; color: #5bffa2 }
+h2 { font-size: 1.2em; }
+strong { background-color: #000000; ; color: #008cff; padding: 0px 10px; }
+ul { margin: 0px 15px; padding-left: 1em; margin-bottom: 1.5em; line-height: 1.6em }
+ul.index { margin: 0px; list-style-type: none; padding-left: 0em }
+img { display: block; max-width: 100%; border-radius: 0.7em; margin: 3em 0em }
+.g9h { color: black; font-size: 1.1em; text-decoration:none; color: var(--primary-color); }
+.g9h:visited { margin-left: 0px; color: var(--link-color); }
+a, a:visited { text-decoration:none; color: var(--link-color); }
+a:hover { text-decoration: underline; color: var(--primary-color); }
+span.inline-terminal {
+    background-color: var(--primary-color);
+    border-radius: 0px;
+    padding: 2px 5px;
+    color: black
+}
+blockquote {
+    font-style: italic;
+    border-left: 0.25rem solid rgb(255, 255, 255, 0.8);
+    padding: 0.5em 3em;
+    margin: 1.5em 0;
+}
+
+@media only screen and (min-width: 768px) {
+    html, body { font-family: var(--primary-font); display: flex; justify-content: center; width: 100%; font-size: var(--primary-font-size); }
+    .container { width: 800px }
+}
+
+/* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=bash+python+yaml */
+
+code[class*=language-],pre[class*=language-] {
+    padding:0em;
+    color:#ccc;
+    background:0 0;
+    font-family:var(--primary-font) ;
+    font-size:1em;
+    text-align:left;
+    white-space:pre;
+    word-spacing:normal;
+    word-break:normal;
+    word-wrap:normal;
+    line-height:1.6;
+    -moz-tab-size:4;
+    -o-tab-size:4;
+    tab-size:4;
+    -webkit-hyphens:none;
+    -moz-hyphens:none;
+    -ms-hyphens:none;
+    hyphens:none
+}
+
+pre[class*=language-] {
+    border-radius: 0.7em;
+    padding: 1.5em 1em;
+    margin:0em 0em 1.5em 0em;
+    overflow:auto;
+}
+
+:not(pre)>code[class*=language-],pre[class*=language-] {
+    /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+:not(pre)>code[class*=language-] {
+    padding:0em;
+    white-space:normal
+}
+
+.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}
+.token.punctuation{color:#ccc}
+.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}
+.token.function-name{color:#6196cc}
+.token.boolean,.token.function,.token.number{color:#f08d49}
+.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}
+.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}
+.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}
+.token.entity,.token.operator,.token.url{color:#67cdcc}
+.token.bold,.token.important{font-weight:700}
+.token.italic{font-style:italic}
+.token.entity{cursor:help}
+.token.inserted{color:green}
