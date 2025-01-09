@@ -3,8 +3,16 @@
 import os
 import markdown
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+from markdown.extensions.wikilinks import WikiLinkExtension
 
-md = markdown.Markdown(extensions=["meta", "fenced_code"])
+md = markdown.Markdown(
+    extensions=[
+        "meta",
+        "fenced_code",
+        "wikilinks",
+        WikiLinkExtension(end_url=".html"),
+    ]
+)
 
 jinja_env = Environment(
     loader=FileSystemLoader("templates"), autoescape=select_autoescape()
